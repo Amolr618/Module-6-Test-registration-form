@@ -81,14 +81,14 @@ function validate(isSubmitted = false) {
         }
 
         /* Phone No.// 
-        - first 3 digit are 6,7,8,9 
+        - first 1 digit is 6,7,8,9 only
         - remaining are 0-9 
         - phone no without space and without character
         - Length exactly equal to 10 characters
         - Only numbers allowed
         - Cannot start with 0, 1, 2, 3, 4, 5
         */
-        var phoneno = /^\(?([6-9]{3})\)?([0-9]{7})$/;
+        var phoneno = /^\(?([6-9]{1})\)?([0-9]{9})$/;
         if ((!isNaN(PhoneNumber)) && (PhoneNumber.match(phoneno))) {
             document.getElementById("phone-number-valid").style.display = 'block'
             document.getElementById("phone-number-invalid").style.display = 'none'
